@@ -9,11 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet var tableView: UITableView!
+    
     var menuList: [String] = ["Vignere", "ROT", "ASCII", "Braille"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.tableView.tableFooterView = UIView(frame:CGRectZero)
     }
 
     override func didReceiveMemoryWarning() {
