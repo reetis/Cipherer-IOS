@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A111BDBE1A36F3A700FB04AE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A111BDBD1A36F3A700FB04AE /* SWRevealViewController.m */; };
+		A111BDCB1A370B5600FB04AE /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDC91A370B5600FB04AE /* ENSideMenu.swift */; };
+		A111BDCC1A370B5600FB04AE /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDCA1A370B5600FB04AE /* ENSideMenuNavigationController.swift */; };
+		A111BDCF1A370EFD00FB04AE /* MenuTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDCD1A370EFD00FB04AE /* MenuTableController.swift */; };
+		A111BDD01A370EFD00FB04AE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDCE1A370EFD00FB04AE /* NavigationController.swift */; };
 		A16221581A2DCD100055F938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16221571A2DCD100055F938 /* AppDelegate.swift */; };
 		A162215A1A2DCD100055F938 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16221591A2DCD100055F938 /* ViewController.swift */; };
 		A162215D1A2DCD100055F938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A162215B1A2DCD100055F938 /* Main.storyboard */; };
@@ -27,9 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A111BDBB1A36F3A600FB04AE /* Cipherer-IOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cipherer-IOS-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		A111BDBC1A36F3A700FB04AE /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		A111BDBD1A36F3A700FB04AE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A111BDC91A370B5600FB04AE /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		A111BDCA1A370B5600FB04AE /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		A111BDCD1A370EFD00FB04AE /* MenuTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableController.swift; sourceTree = "<group>"; };
+		A111BDCE1A370EFD00FB04AE /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A16221521A2DCD100055F938 /* Cipherer-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipherer-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16221561A2DCD100055F938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16221571A2DCD100055F938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,9 +85,10 @@
 		A16221541A2DCD100055F938 /* Cipherer-IOS */ = {
 			isa = PBXGroup;
 			children = (
-				A111BDBB1A36F3A600FB04AE /* Cipherer-IOS-Bridging-Header.h */,
-				A111BDBC1A36F3A700FB04AE /* SWRevealViewController.h */,
-				A111BDBD1A36F3A700FB04AE /* SWRevealViewController.m */,
+				A111BDC91A370B5600FB04AE /* ENSideMenu.swift */,
+				A111BDCA1A370B5600FB04AE /* ENSideMenuNavigationController.swift */,
+				A111BDCD1A370EFD00FB04AE /* MenuTableController.swift */,
+				A111BDCE1A370EFD00FB04AE /* NavigationController.swift */,
 				A16221571A2DCD100055F938 /* AppDelegate.swift */,
 				A16221591A2DCD100055F938 /* ViewController.swift */,
 				A162215B1A2DCD100055F938 /* Main.storyboard */,
@@ -219,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A111BDCB1A370B5600FB04AE /* ENSideMenu.swift in Sources */,
 				A162215A1A2DCD100055F938 /* ViewController.swift in Sources */,
 				A16221581A2DCD100055F938 /* AppDelegate.swift in Sources */,
-				A111BDBE1A36F3A700FB04AE /* SWRevealViewController.m in Sources */,
+				A111BDCC1A370B5600FB04AE /* ENSideMenuNavigationController.swift in Sources */,
+				A111BDD01A370EFD00FB04AE /* NavigationController.swift in Sources */,
+				A111BDCF1A370EFD00FB04AE /* MenuTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +356,7 @@
 				INFOPLIST_FILE = "Cipherer-IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Cipherer-IOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -361,7 +369,7 @@
 				INFOPLIST_FILE = "Cipherer-IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Cipherer-IOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
