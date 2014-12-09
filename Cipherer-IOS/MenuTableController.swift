@@ -10,7 +10,8 @@ import UIKit
 
 class MenuTableController: UITableViewController {
     var selectedMenuItem : Int = 0
-    var menuList: [(name: String, controller: String)] = [  ("Vignere", "VignereController"),
+    var menuList: [(name: String, controller: String)] = [  ("Start window", "MainWindow"),
+                                                            ("Vignere", "VignereController"),
                                                             ("ROT", "ROTController"),
                                                             ("ASCII", "ASCIIController"),
                                                             ("Braille", "BrailleController")]
@@ -80,7 +81,7 @@ class MenuTableController: UITableViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
         var destViewController : UIViewController
         //TODO: atkomentuoti, kai padarysiu kitus viewsus
-        //destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(menuList[indexPath.row].controller) as UIViewController
+        destViewController = mainStoryboard.instantiateViewControllerWithIdentifier(menuList[indexPath.row].controller) as UIViewController
         sideMenuController()?.setContentViewController(destViewController)
     }
     

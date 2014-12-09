@@ -23,7 +23,7 @@
         <!--Cipherer-->
         <scene sceneID="Rx0-DI-a50">
             <objects>
-                <viewController id="Hn4-Wr-L2q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainWindow" id="Hn4-Wr-L2q" customClass="StartWindowController" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d80-58-NZ1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,12 +48,65 @@
                     <navigationItem key="navigationItem" title="Cipherer" id="Uuk-mU-qtK">
                         <barButtonItem key="leftBarButtonItem" image="reveal-icon" id="x4f-Dq-hee">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="toggleSideMenu:" destination="Hn4-Wr-L2q" id="EH7-mD-N3k"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Deq-fM-jyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="298"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="nzN-bJ-GUW">
+            <objects>
+                <viewController id="bOZ-gG-Qvl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="714-uU-MU1">
+                        <rect key="frame" x="0.0" y="94" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="bFg-xL-18J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVs-2Z-KAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="1225"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="jHk-eO-0qK">
+            <objects>
+                <viewController id="I3o-Yv-lkw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="owH-bu-iBF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="14h-TE-7Kc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Gl-ff-GLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="595"/>
+        </scene>
+        <!--Vignere-->
+        <scene sceneID="gDh-Ab-ZJh">
+            <objects>
+                <tabBarController storyboardIdentifier="VignereController" title="Vignere" id="ugI-gY-k5S" customClass="TabBarController" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="sDh-YZ-urm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="I3o-Yv-lkw" kind="relationship" relationship="viewControllers" id="vuA-qS-uuM"/>
+                        <segue destination="bOZ-gG-Qvl" kind="relationship" relationship="viewControllers" id="mtT-wY-5M1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XoG-nC-z0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592" y="952"/>
         </scene>
     </scenes>
     <resources>
