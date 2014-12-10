@@ -18,6 +18,7 @@
 		A162215F1A2DCD100055F938 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A162215E1A2DCD100055F938 /* Images.xcassets */; };
 		A16221621A2DCD100055F938 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16221601A2DCD100055F938 /* LaunchScreen.xib */; };
 		A162216E1A2DCD100055F938 /* Cipherer_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162216D1A2DCD100055F938 /* Cipherer_IOSTests.swift */; };
+		A1E532001A387109006FF240 /* VignereCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E531FF1A387109006FF240 /* VignereCipher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		A16221671A2DCD100055F938 /* Cipherer-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cipherer-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162216C1A2DCD100055F938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A162216D1A2DCD100055F938 /* Cipherer_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipherer_IOSTests.swift; sourceTree = "<group>"; };
+		A1E531FF1A387109006FF240 /* VignereCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VignereCipher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				A16221551A2DCD100055F938 /* Supporting Files */,
 				A111BDD11A371E9C00FB04AE /* StartWindowController.swift */,
 				A111BDD31A37228300FB04AE /* TabBarController.swift */,
+				A1E531FF1A387109006FF240 /* VignereCipher.swift */,
 			);
 			path = "Cipherer-IOS";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A111BDCB1A370B5600FB04AE /* ENSideMenu.swift in Sources */,
+				A1E532001A387109006FF240 /* VignereCipher.swift in Sources */,
 				A16221581A2DCD100055F938 /* AppDelegate.swift in Sources */,
 				A111BDCC1A370B5600FB04AE /* ENSideMenuNavigationController.swift in Sources */,
 				A111BDD21A371E9C00FB04AE /* StartWindowController.swift in Sources */,
