@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FIg-3j-m3h">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -71,42 +72,57 @@
             <objects>
                 <viewController title="Vignere Code" id="bOZ-gG-Qvl" customClass="VignereCipher" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nZJ-a1-jT9"/>
-                        <viewControllerLayoutGuide type="bottom" id="WaI-yJ-NsM"/>
+                        <viewControllerLayoutGuide type="top" id="paX-u6-jxo"/>
+                        <viewControllerLayoutGuide type="bottom" id="s7T-EW-m4E"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="714-uU-MU1">
-                        <rect key="frame" x="0.0" y="94" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="gxe-U3-jcW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PML-1b-HVN">
-                                <rect key="frame" x="16" y="284" width="288" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-KP-CQI">
-                                <rect key="frame" x="16" y="0.0" width="288" height="238"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Er-QV-ek2">
+                                <rect key="frame" x="16" y="8" width="288" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x78-L6-6IV">
-                                <rect key="frame" x="267" y="246" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YW-fC-OpU">
+                                <rect key="frame" x="267" y="176" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KoV-gJ-8uJ"/>
+                                    <constraint firstAttribute="width" constant="37" id="Mph-PS-WKg"/>
+                                </constraints>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clearText:" destination="bOZ-gG-Qvl" eventType="touchUpInside" id="wnf-8V-LLi"/>
+                                    <action selector="clearText:" destination="bOZ-gG-Qvl" eventType="touchUpInside" id="1Sp-yZ-0Uj"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-6R-fp5">
+                                <rect key="frame" x="16" y="214" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M9A-6R-fp5" firstAttribute="trailing" secondItem="gxe-U3-jcW" secondAttribute="trailingMargin" id="BmI-hd-AvJ"/>
+                            <constraint firstItem="5Er-QV-ek2" firstAttribute="leading" secondItem="gxe-U3-jcW" secondAttribute="leadingMargin" id="C1d-HY-Q88"/>
+                            <constraint firstItem="M9A-6R-fp5" firstAttribute="leading" secondItem="gxe-U3-jcW" secondAttribute="leadingMargin" id="D0A-fn-HhX"/>
+                            <constraint firstItem="9YW-fC-OpU" firstAttribute="trailing" secondItem="gxe-U3-jcW" secondAttribute="trailingMargin" id="Eot-zV-WV6"/>
+                            <constraint firstItem="9YW-fC-OpU" firstAttribute="top" secondItem="5Er-QV-ek2" secondAttribute="bottom" constant="8" id="Gc3-8b-jOi"/>
+                            <constraint firstItem="s7T-EW-m4E" firstAttribute="top" secondItem="M9A-6R-fp5" secondAttribute="bottom" constant="220" id="Pwj-0W-qLK"/>
+                            <constraint firstItem="M9A-6R-fp5" firstAttribute="top" secondItem="9YW-fC-OpU" secondAttribute="bottom" constant="8" id="Vb0-q5-DpR"/>
+                            <constraint firstItem="5Er-QV-ek2" firstAttribute="trailing" secondItem="gxe-U3-jcW" secondAttribute="trailingMargin" id="kkC-NX-Gdl"/>
+                            <constraint firstItem="5Er-QV-ek2" firstAttribute="top" secondItem="paX-u6-jxo" secondAttribute="bottom" constant="8" id="sLz-Ys-QQQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Vignere" id="bFg-xL-18J"/>
                     <connections>
-                        <outlet property="clearButton" destination="x78-L6-6IV" id="urK-RA-GJ9"/>
-                        <outlet property="keyTextField" destination="PML-1b-HVN" id="Udp-CA-t3i"/>
-                        <outlet property="outputTextView" destination="sLP-KP-CQI" id="wab-4a-npw"/>
+                        <outlet property="clearButton" destination="9YW-fC-OpU" id="Gpu-7O-efm"/>
+                        <outlet property="keyTextField" destination="M9A-6R-fp5" id="hUl-Va-t4X"/>
+                        <outlet property="outputTextView" destination="5Er-QV-ek2" id="3X6-YG-A60"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVs-2Z-KAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,20 +141,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-AA-ohP">
-                                <rect key="frame" x="16" y="0.0" width="288" height="238"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-AA-ohP">
+                                <rect key="frame" x="16" y="8" width="288" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SE0-jd-AJc">
-                                <rect key="frame" x="16" y="284" width="288" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SE0-jd-AJc">
+                                <rect key="frame" x="16" y="214" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LA-9P-y7B">
-                                <rect key="frame" x="267" y="246" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LA-9P-y7B">
+                                <rect key="frame" x="267" y="176" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="1eW-X0-R56"/>
+                                    <constraint firstAttribute="height" constant="30" id="C4w-Q4-a1m"/>
+                                </constraints>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -148,6 +168,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1LA-9P-y7B" firstAttribute="top" secondItem="kk6-AA-ohP" secondAttribute="bottom" constant="8" id="AnK-Oc-Fjl"/>
+                            <constraint firstItem="kk6-AA-ohP" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="E8c-rJ-qrL"/>
+                            <constraint firstItem="kk6-AA-ohP" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="FLm-IN-34t"/>
+                            <constraint firstItem="SE0-jd-AJc" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="PU5-jq-gT5"/>
+                            <constraint firstItem="kk6-AA-ohP" firstAttribute="top" secondItem="HQW-Cq-FMc" secondAttribute="bottom" constant="8" id="fGB-9e-RB5"/>
+                            <constraint firstItem="SE0-jd-AJc" firstAttribute="top" secondItem="1LA-9P-y7B" secondAttribute="bottom" constant="8" id="foP-ka-QVP"/>
+                            <constraint firstItem="1LA-9P-y7B" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="ong-a8-9KN"/>
+                            <constraint firstItem="SE0-jd-AJc" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="wwK-zg-htK"/>
+                            <constraint firstItem="szf-5X-bhz" firstAttribute="top" secondItem="SE0-jd-AJc" secondAttribute="bottom" constant="220" id="xan-am-FJ8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="14h-TE-7Kc"/>
                     <connections>
