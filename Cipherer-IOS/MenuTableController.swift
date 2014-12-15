@@ -53,13 +53,13 @@ class MenuTableController: UITableViewController {
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
             cell!.backgroundColor = UIColor.clearColor()
-            cell!.textLabel.textColor = UIColor.darkGrayColor()
+            cell!.textLabel!.textColor = UIColor.darkGrayColor()
             let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
             selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
             cell!.selectedBackgroundView = selectedBackgroundView
         }
         
-        cell!.textLabel.text = menuList[indexPath.row].name
+        cell!.textLabel!.text = menuList[indexPath.row].name
         
         return cell!
     }
