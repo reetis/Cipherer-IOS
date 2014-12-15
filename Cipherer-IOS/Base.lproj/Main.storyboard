@@ -69,7 +69,7 @@
         <!--Vignere Code-->
         <scene sceneID="nzN-bJ-GUW">
             <objects>
-                <viewController title="Vignere Code" id="bOZ-gG-Qvl" sceneMemberID="viewController">
+                <viewController title="Vignere Code" id="bOZ-gG-Qvl" customClass="VignereCipher" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nZJ-a1-jT9"/>
                         <viewControllerLayoutGuide type="bottom" id="WaI-yJ-NsM"/>
@@ -95,11 +95,19 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearText:" destination="bOZ-gG-Qvl" eventType="touchUpInside" id="wnf-8V-LLi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Vignere" id="bFg-xL-18J"/>
+                    <connections>
+                        <outlet property="clearButton" destination="x78-L6-6IV" id="urK-RA-GJ9"/>
+                        <outlet property="keyTextField" destination="PML-1b-HVN" id="Udp-CA-t3i"/>
+                        <outlet property="outputTextView" destination="sLP-KP-CQI" id="wab-4a-npw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVs-2Z-KAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +116,7 @@
         <!--Vignere Text-->
         <scene sceneID="jHk-eO-0qK">
             <objects>
-                <viewController title="Vignere Text" id="I3o-Yv-lkw" sceneMemberID="viewController">
+                <viewController title="Vignere Text" id="I3o-Yv-lkw" customClass="VignereText" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HQW-Cq-FMc"/>
                         <viewControllerLayoutGuide type="bottom" id="szf-5X-bhz"/>
@@ -134,11 +142,19 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearText:" destination="I3o-Yv-lkw" eventType="touchUpInside" id="rXs-f8-OXG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="14h-TE-7Kc"/>
+                    <connections>
+                        <outlet property="clearButton" destination="1LA-9P-y7B" id="1dO-TW-TyS"/>
+                        <outlet property="keyTextField" destination="SE0-jd-AJc" id="pJ8-T7-hzK"/>
+                        <outlet property="outputTextView" destination="kk6-AA-ohP" id="jOw-4R-Tjo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gl-ff-GLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +163,7 @@
         <!--Vignere-->
         <scene sceneID="gDh-Ab-ZJh">
             <objects>
-                <tabBarController storyboardIdentifier="VignereController" title="Vignere" id="ugI-gY-k5S" customClass="TabBarController" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="VignereController" title="Vignere" id="ugI-gY-k5S" customClass="Vignere" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="sDh-YZ-urm">

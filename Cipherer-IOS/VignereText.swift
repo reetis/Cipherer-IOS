@@ -1,5 +1,5 @@
 //
-//  VignereCipher.swift
+//  VignereText.swift
 //  Cipherer-IOS
 //
 //  Created by Rytis Stankus on 12/15/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VignereCipher: UIViewController, UITextViewDelegate {
+class VignereText: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var outputTextView: UITextView!
     @IBOutlet weak var keyTextField: UITextField!
