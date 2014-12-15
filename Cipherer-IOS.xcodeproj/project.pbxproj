@@ -13,6 +13,9 @@
 		A111BDD01A370EFD00FB04AE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDCE1A370EFD00FB04AE /* NavigationController.swift */; };
 		A111BDD21A371E9C00FB04AE /* StartWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDD11A371E9C00FB04AE /* StartWindowController.swift */; };
 		A111BDD41A37228300FB04AE /* Vignere.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDD31A37228300FB04AE /* Vignere.swift */; };
+		A13F1CE21A3F3D2000C1ADBC /* ROT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE11A3F3D2000C1ADBC /* ROT.swift */; };
+		A13F1CE41A3F3E1600C1ADBC /* ROTText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE31A3F3E1600C1ADBC /* ROTText.swift */; };
+		A13F1CE61A3F3E2300C1ADBC /* ROTCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE51A3F3E2300C1ADBC /* ROTCipher.swift */; };
 		A16221581A2DCD100055F938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16221571A2DCD100055F938 /* AppDelegate.swift */; };
 		A162215D1A2DCD100055F938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A162215B1A2DCD100055F938 /* Main.storyboard */; };
 		A162215F1A2DCD100055F938 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A162215E1A2DCD100055F938 /* Images.xcassets */; };
@@ -39,6 +42,9 @@
 		A111BDCE1A370EFD00FB04AE /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A111BDD11A371E9C00FB04AE /* StartWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartWindowController.swift; sourceTree = "<group>"; };
 		A111BDD31A37228300FB04AE /* Vignere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vignere.swift; sourceTree = "<group>"; };
+		A13F1CE11A3F3D2000C1ADBC /* ROT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROT.swift; sourceTree = "<group>"; };
+		A13F1CE31A3F3E1600C1ADBC /* ROTText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROTText.swift; sourceTree = "<group>"; };
+		A13F1CE51A3F3E2300C1ADBC /* ROTCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROTCipher.swift; sourceTree = "<group>"; };
 		A16221521A2DCD100055F938 /* Cipherer-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipherer-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16221561A2DCD100055F938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16221571A2DCD100055F938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A13F1CE01A3F3CF500C1ADBC /* ROT */ = {
+			isa = PBXGroup;
+			children = (
+				A13F1CE11A3F3D2000C1ADBC /* ROT.swift */,
+				A13F1CE31A3F3E1600C1ADBC /* ROTText.swift */,
+				A13F1CE51A3F3E2300C1ADBC /* ROTCipher.swift */,
+			);
+			name = ROT;
+			sourceTree = "<group>";
+		};
 		A16221491A2DCD100055F938 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +118,7 @@
 				A16221551A2DCD100055F938 /* Supporting Files */,
 				A111BDD11A371E9C00FB04AE /* StartWindowController.swift */,
 				A1FFAB4A1A3F04FF00CB145C /* Vignere */,
+				A13F1CE01A3F3CF500C1ADBC /* ROT */,
 			);
 			path = "Cipherer-IOS";
 			sourceTree = "<group>";
@@ -247,9 +264,12 @@
 				A111BDD21A371E9C00FB04AE /* StartWindowController.swift in Sources */,
 				A111BDD41A37228300FB04AE /* Vignere.swift in Sources */,
 				A111BDD01A370EFD00FB04AE /* NavigationController.swift in Sources */,
+				A13F1CE61A3F3E2300C1ADBC /* ROTCipher.swift in Sources */,
+				A13F1CE41A3F3E1600C1ADBC /* ROTText.swift in Sources */,
 				A1FFAB491A3EFE9C00CB145C /* VignereCipher.swift in Sources */,
 				A111BDCF1A370EFD00FB04AE /* MenuTableController.swift in Sources */,
 				A1FFAB471A3EF15D00CB145C /* VignereText.swift in Sources */,
+				A13F1CE21A3F3D2000C1ADBC /* ROT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

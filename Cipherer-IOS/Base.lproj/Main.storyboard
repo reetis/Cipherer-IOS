@@ -51,7 +51,7 @@
                             <constraint firstItem="DwS-Oq-RuD" firstAttribute="top" secondItem="8cL-jB-yOT" secondAttribute="bottom" constant="8" id="K0w-Iy-LqE"/>
                             <constraint firstAttribute="centerX" secondItem="8cL-jB-yOT" secondAttribute="centerX" id="Ovp-2G-Jbs"/>
                             <constraint firstAttribute="centerX" secondItem="DwS-Oq-RuD" secondAttribute="centerX" id="S0i-xG-Y1Z"/>
-                            <constraint firstAttribute="centerY" secondItem="8cL-jB-yOT" secondAttribute="centerY" id="wn7-gO-0wg"/>
+                            <constraint firstAttribute="centerY" secondItem="8cL-jB-yOT" secondAttribute="centerY" id="nDe-iS-Fiz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cipherer" id="Uuk-mU-qtK">
@@ -80,14 +80,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Er-QV-ek2">
-                                <rect key="frame" x="16" y="8" width="288" height="160"/>
+                                <rect key="frame" x="16" y="8" width="288" height="159"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YW-fC-OpU">
-                                <rect key="frame" x="267" y="176" width="37" height="30"/>
+                                <rect key="frame" x="267" y="175" width="37" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KoV-gJ-8uJ"/>
                                     <constraint firstAttribute="width" constant="37" id="Mph-PS-WKg"/>
@@ -99,8 +99,8 @@
                                     <action selector="clearText:" destination="bOZ-gG-Qvl" eventType="touchUpInside" id="1Sp-yZ-0Uj"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-6R-fp5">
-                                <rect key="frame" x="16" y="214" width="288" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-6R-fp5">
+                                <rect key="frame" x="16" y="213" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -129,6 +129,150 @@
             </objects>
             <point key="canvasLocation" x="1098" y="1225"/>
         </scene>
+        <!--ROT Code-->
+        <scene sceneID="hab-cb-NA6">
+            <objects>
+                <viewController title="ROT Code" id="wL9-7n-s0q" customClass="ROTCipher" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zmq-jg-esQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="SvA-cF-viu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OeZ-Fp-7I7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Key" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KSM-sg-v4E">
+                                <rect key="frame" x="16" y="213" width="288" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-Of-dqg">
+                                <rect key="frame" x="267" y="175" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0tp-EX-Qin"/>
+                                    <constraint firstAttribute="width" constant="37" id="58q-Ss-wBP"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearText:" destination="wL9-7n-s0q" eventType="touchUpInside" id="OKL-CH-UM3"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-yc-uCV">
+                                <rect key="frame" x="16" y="8" width="288" height="159"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zfK-Of-dqg" firstAttribute="top" secondItem="gQx-yc-uCV" secondAttribute="bottom" constant="8" id="2hs-sm-jBW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zfK-Of-dqg" secondAttribute="trailing" id="7et-c5-Zt4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gQx-yc-uCV" secondAttribute="trailing" id="G96-CV-1OR"/>
+                            <constraint firstItem="SvA-cF-viu" firstAttribute="top" secondItem="KSM-sg-v4E" secondAttribute="bottom" constant="220" id="K8y-xO-p6r"/>
+                            <constraint firstItem="KSM-sg-v4E" firstAttribute="leading" secondItem="OeZ-Fp-7I7" secondAttribute="leadingMargin" id="MdQ-jF-t36"/>
+                            <constraint firstItem="gQx-yc-uCV" firstAttribute="top" secondItem="Zmq-jg-esQ" secondAttribute="bottom" constant="8" id="Pw6-1j-pPn"/>
+                            <constraint firstItem="gQx-yc-uCV" firstAttribute="leading" secondItem="OeZ-Fp-7I7" secondAttribute="leadingMargin" id="f4P-hG-hqE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KSM-sg-v4E" secondAttribute="trailing" id="p40-1f-LAD"/>
+                            <constraint firstItem="KSM-sg-v4E" firstAttribute="top" secondItem="zfK-Of-dqg" secondAttribute="bottom" constant="8" id="yO4-Qb-JHV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ROT" id="5Js-oP-WrY"/>
+                    <connections>
+                        <outlet property="clearButton" destination="zfK-Of-dqg" id="W3R-Zg-30B"/>
+                        <outlet property="keyTextField" destination="KSM-sg-v4E" id="yDg-Bn-VsC"/>
+                        <outlet property="outputTextView" destination="gQx-yc-uCV" id="Bia-DI-xdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBB-Tg-Eyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="613"/>
+        </scene>
+        <!--ROT Text-->
+        <scene sceneID="Usy-hW-vbg">
+            <objects>
+                <viewController title="ROT Text" id="BGF-jG-9zo" customClass="ROTText" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xh2-oy-3Nq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ot0-Fx-xMn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5MT-xB-Xmi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQk-TE-2l7">
+                                <rect key="frame" x="267" y="175" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kCj-Sa-xeb"/>
+                                    <constraint firstAttribute="width" constant="37" id="vu9-Cq-M3a"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearText:" destination="BGF-jG-9zo" eventType="touchUpInside" id="tjA-Uo-DgL"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5at-kE-Kwn">
+                                <rect key="frame" x="16" y="8" width="288" height="159"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Key" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cb3-Uk-Myv">
+                                <rect key="frame" x="16" y="213" width="288" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cb3-Uk-Myv" firstAttribute="leading" secondItem="5MT-xB-Xmi" secondAttribute="leadingMargin" id="Ab4-6X-ISa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cb3-Uk-Myv" secondAttribute="trailing" id="C7d-cI-h9A"/>
+                            <constraint firstItem="5at-kE-Kwn" firstAttribute="top" secondItem="xh2-oy-3Nq" secondAttribute="bottom" constant="8" id="GlG-GV-Otv"/>
+                            <constraint firstItem="cQk-TE-2l7" firstAttribute="top" secondItem="5at-kE-Kwn" secondAttribute="bottom" constant="8" id="Irl-EQ-6KC"/>
+                            <constraint firstItem="Cb3-Uk-Myv" firstAttribute="top" secondItem="cQk-TE-2l7" secondAttribute="bottom" constant="8" id="Js6-Ti-FF6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5at-kE-Kwn" secondAttribute="trailing" id="Mlj-eQ-8jX"/>
+                            <constraint firstItem="5at-kE-Kwn" firstAttribute="leading" secondItem="5MT-xB-Xmi" secondAttribute="leadingMargin" id="Uel-y8-9hT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cQk-TE-2l7" secondAttribute="trailing" id="niD-af-X6I"/>
+                            <constraint firstItem="ot0-Fx-xMn" firstAttribute="top" secondItem="Cb3-Uk-Myv" secondAttribute="bottom" constant="220" id="yuT-V1-lO5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Text" id="qHG-18-xWv"/>
+                    <connections>
+                        <outlet property="clearButton" destination="cQk-TE-2l7" id="syn-vH-2nN"/>
+                        <outlet property="keyTextField" destination="Cb3-Uk-Myv" id="EPe-Lj-Mak"/>
+                        <outlet property="outputTextView" destination="5at-kE-Kwn" id="oc7-cD-yvP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ht1-UI-xIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="-17"/>
+        </scene>
+        <!--ROT-->
+        <scene sceneID="KeN-WB-GcG">
+            <objects>
+                <tabBarController storyboardIdentifier="ROTController" id="vaW-Yy-Irp" customClass="ROT" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JBJ-cg-Yd4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BGF-jG-9zo" kind="relationship" relationship="viewControllers" id="fk3-bQ-d09"/>
+                        <segue destination="wL9-7n-s0q" kind="relationship" relationship="viewControllers" id="Asa-S7-73l"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSj-vm-64h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="299"/>
+        </scene>
         <!--Vignere Text-->
         <scene sceneID="jHk-eO-0qK">
             <objects>
@@ -142,19 +286,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-AA-ohP">
-                                <rect key="frame" x="16" y="-57" width="288" height="225"/>
+                                <rect key="frame" x="16" y="-56" width="288" height="223"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SE0-jd-AJc">
-                                <rect key="frame" x="16" y="214" width="288" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SE0-jd-AJc">
+                                <rect key="frame" x="16" y="213" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LA-9P-y7B">
-                                <rect key="frame" x="267" y="176" width="37" height="30"/>
+                                <rect key="frame" x="267" y="175" width="37" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="1eW-X0-R56"/>
                                     <constraint firstAttribute="height" constant="30" id="C4w-Q4-a1m"/>
@@ -173,7 +317,7 @@
                             <constraint firstItem="kk6-AA-ohP" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="E8c-rJ-qrL"/>
                             <constraint firstItem="kk6-AA-ohP" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="FLm-IN-34t"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="PU5-jq-gT5"/>
-                            <constraint firstItem="kk6-AA-ohP" firstAttribute="top" secondItem="HQW-Cq-FMc" secondAttribute="bottom" constant="-57" id="fGB-9e-RB5"/>
+                            <constraint firstItem="kk6-AA-ohP" firstAttribute="top" secondItem="HQW-Cq-FMc" secondAttribute="bottom" constant="-56" id="fGB-9e-RB5"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="top" secondItem="1LA-9P-y7B" secondAttribute="bottom" constant="8" id="foP-ka-QVP"/>
                             <constraint firstItem="1LA-9P-y7B" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="ong-a8-9KN"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="wwK-zg-htK"/>
