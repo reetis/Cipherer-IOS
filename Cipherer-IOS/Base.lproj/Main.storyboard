@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-AA-ohP">
-                                <rect key="frame" x="16" y="8" width="288" height="160"/>
+                                <rect key="frame" x="16" y="-57" width="288" height="225"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -173,7 +173,7 @@
                             <constraint firstItem="kk6-AA-ohP" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="E8c-rJ-qrL"/>
                             <constraint firstItem="kk6-AA-ohP" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="FLm-IN-34t"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="PU5-jq-gT5"/>
-                            <constraint firstItem="kk6-AA-ohP" firstAttribute="top" secondItem="HQW-Cq-FMc" secondAttribute="bottom" constant="8" id="fGB-9e-RB5"/>
+                            <constraint firstItem="kk6-AA-ohP" firstAttribute="top" secondItem="HQW-Cq-FMc" secondAttribute="bottom" constant="-57" id="fGB-9e-RB5"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="top" secondItem="1LA-9P-y7B" secondAttribute="bottom" constant="8" id="foP-ka-QVP"/>
                             <constraint firstItem="1LA-9P-y7B" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="ong-a8-9KN"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="wwK-zg-htK"/>
