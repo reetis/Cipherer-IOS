@@ -481,6 +481,132 @@
             </objects>
             <point key="canvasLocation" x="1541" y="1571"/>
         </scene>
+        <!--Braille Code-->
+        <scene sceneID="ouj-nX-PI5">
+            <objects>
+                <viewController title="Braille Code" id="dnq-Hq-JA2" customClass="BrailleCipher" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xKS-wN-yFU"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ZC-Ug-dV2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1zI-nB-cGi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyo-op-kHk">
+                                <rect key="frame" x="267" y="205" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mr8-Bw-HYI"/>
+                                    <constraint firstAttribute="width" constant="37" id="vZo-MJ-fvI"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearText:" destination="dnq-Hq-JA2" eventType="touchUpInside" id="CXI-S6-u6d"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1K-vN-k9i">
+                                <rect key="frame" x="16" y="8" width="288" height="189"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7ZC-Ug-dV2" firstAttribute="top" secondItem="kyo-op-kHk" secondAttribute="bottom" constant="220" id="AsB-2i-zId"/>
+                            <constraint firstItem="kyo-op-kHk" firstAttribute="top" secondItem="m1K-vN-k9i" secondAttribute="bottom" constant="8" id="VD0-NV-4yF"/>
+                            <constraint firstItem="m1K-vN-k9i" firstAttribute="leading" secondItem="1zI-nB-cGi" secondAttribute="leadingMargin" id="aQE-LB-rdc"/>
+                            <constraint firstItem="m1K-vN-k9i" firstAttribute="top" secondItem="xKS-wN-yFU" secondAttribute="bottom" constant="8" id="hzw-W0-T6v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m1K-vN-k9i" secondAttribute="trailing" id="i1C-dK-dav"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kyo-op-kHk" secondAttribute="trailing" id="lcZ-ol-NJ3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Braille" id="uCH-aD-uqd"/>
+                    <connections>
+                        <outlet property="clearButton" destination="kyo-op-kHk" id="bU2-Hr-eAi"/>
+                        <outlet property="outputTextView" destination="m1K-vN-k9i" id="LQu-kW-Ny0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0Q-nw-WXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="613"/>
+        </scene>
+        <!--Braille Text-->
+        <scene sceneID="gHb-Ec-yOc">
+            <objects>
+                <viewController title="Braille Text" id="Bkq-I7-a6H" customClass="BrailleText" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M3R-o1-QBL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qfn-8P-nQr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kl8-Io-Icv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgG-Ih-1Jj">
+                                <rect key="frame" x="267" y="205" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bT8-c8-KDO"/>
+                                    <constraint firstAttribute="width" constant="37" id="nLl-2I-C5I"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearText:" destination="Bkq-I7-a6H" eventType="touchUpInside" id="NsD-l9-r7J"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-wN-IvE">
+                                <rect key="frame" x="16" y="8" width="288" height="189"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="YbV-wN-IvE" secondAttribute="trailing" id="1cI-GF-wma"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zgG-Ih-1Jj" secondAttribute="trailing" id="7bQ-4n-MAp"/>
+                            <constraint firstItem="zgG-Ih-1Jj" firstAttribute="top" secondItem="YbV-wN-IvE" secondAttribute="bottom" constant="8" id="cTh-Ue-sf4"/>
+                            <constraint firstItem="YbV-wN-IvE" firstAttribute="top" secondItem="M3R-o1-QBL" secondAttribute="bottom" constant="8" id="jt5-zn-uFG"/>
+                            <constraint firstItem="Qfn-8P-nQr" firstAttribute="top" secondItem="zgG-Ih-1Jj" secondAttribute="bottom" constant="220" id="pGd-EO-dmi"/>
+                            <constraint firstItem="YbV-wN-IvE" firstAttribute="leading" secondItem="Kl8-Io-Icv" secondAttribute="leadingMargin" id="t0d-dL-9jJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Text" id="aMw-f2-RQE"/>
+                    <connections>
+                        <outlet property="clearButton" destination="zgG-Ih-1Jj" id="yLm-Rz-G0P"/>
+                        <outlet property="outputTextView" destination="YbV-wN-IvE" id="NeY-lh-QD1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oh-QT-AHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="-17"/>
+        </scene>
+        <!--Braille-->
+        <scene sceneID="IPh-DC-862">
+            <objects>
+                <tabBarController storyboardIdentifier="BrailleController" id="5u0-Pg-CEk" customClass="Braille" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="7c3-vF-62y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bkq-I7-a6H" kind="relationship" relationship="viewControllers" id="NJ1-K9-Qr8"/>
+                        <segue destination="dnq-Hq-JA2" kind="relationship" relationship="viewControllers" id="aze-Zn-bhm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VT4-4O-qcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2483" y="299"/>
+        </scene>
     </scenes>
     <resources>
         <image name="reveal-icon" width="22" height="17"/>

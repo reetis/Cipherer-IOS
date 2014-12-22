@@ -16,6 +16,9 @@
 		A13CFE811A4843670020B0F8 /* ASCII.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE801A4843670020B0F8 /* ASCII.swift */; };
 		A13CFE831A4844070020B0F8 /* ASCIIText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE821A4844070020B0F8 /* ASCIIText.swift */; };
 		A13CFE851A48446A0020B0F8 /* ASCIICipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE841A48446A0020B0F8 /* ASCIICipher.swift */; };
+		A13CFE881A4851E90020B0F8 /* Braille.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE871A4851E90020B0F8 /* Braille.swift */; };
+		A13CFE8A1A4851F50020B0F8 /* BrailleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE891A4851F50020B0F8 /* BrailleText.swift */; };
+		A13CFE8C1A4852010020B0F8 /* BrailleCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE8B1A4852010020B0F8 /* BrailleCipher.swift */; };
 		A13F1CE21A3F3D2000C1ADBC /* ROT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE11A3F3D2000C1ADBC /* ROT.swift */; };
 		A13F1CE41A3F3E1600C1ADBC /* ROTText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE31A3F3E1600C1ADBC /* ROTText.swift */; };
 		A13F1CE61A3F3E2300C1ADBC /* ROTCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE51A3F3E2300C1ADBC /* ROTCipher.swift */; };
@@ -48,6 +51,9 @@
 		A13CFE801A4843670020B0F8 /* ASCII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCII.swift; sourceTree = "<group>"; };
 		A13CFE821A4844070020B0F8 /* ASCIIText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCIIText.swift; sourceTree = "<group>"; };
 		A13CFE841A48446A0020B0F8 /* ASCIICipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCIICipher.swift; sourceTree = "<group>"; };
+		A13CFE871A4851E90020B0F8 /* Braille.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Braille.swift; sourceTree = "<group>"; };
+		A13CFE891A4851F50020B0F8 /* BrailleText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrailleText.swift; sourceTree = "<group>"; };
+		A13CFE8B1A4852010020B0F8 /* BrailleCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrailleCipher.swift; sourceTree = "<group>"; };
 		A13F1CE11A3F3D2000C1ADBC /* ROT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROT.swift; sourceTree = "<group>"; };
 		A13F1CE31A3F3E1600C1ADBC /* ROTText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROTText.swift; sourceTree = "<group>"; };
 		A13F1CE51A3F3E2300C1ADBC /* ROTCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROTCipher.swift; sourceTree = "<group>"; };
@@ -90,6 +96,16 @@
 				A13CFE841A48446A0020B0F8 /* ASCIICipher.swift */,
 			);
 			name = ASCII;
+			sourceTree = "<group>";
+		};
+		A13CFE861A4851850020B0F8 /* Braille */ = {
+			isa = PBXGroup;
+			children = (
+				A13CFE871A4851E90020B0F8 /* Braille.swift */,
+				A13CFE891A4851F50020B0F8 /* BrailleText.swift */,
+				A13CFE8B1A4852010020B0F8 /* BrailleCipher.swift */,
+			);
+			name = Braille;
 			sourceTree = "<group>";
 		};
 		A13F1CE01A3F3CF500C1ADBC /* ROT */ = {
@@ -136,6 +152,7 @@
 				A1FFAB4A1A3F04FF00CB145C /* Vignere */,
 				A13F1CE01A3F3CF500C1ADBC /* ROT */,
 				A13CFE7F1A4842C50020B0F8 /* ASCII */,
+				A13CFE861A4851850020B0F8 /* Braille */,
 			);
 			path = "Cipherer-IOS";
 			sourceTree = "<group>";
@@ -275,14 +292,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13CFE8A1A4851F50020B0F8 /* BrailleText.swift in Sources */,
 				A111BDCB1A370B5600FB04AE /* ENSideMenu.swift in Sources */,
 				A16221581A2DCD100055F938 /* AppDelegate.swift in Sources */,
 				A111BDCC1A370B5600FB04AE /* ENSideMenuNavigationController.swift in Sources */,
+				A13CFE881A4851E90020B0F8 /* Braille.swift in Sources */,
 				A111BDD21A371E9C00FB04AE /* StartWindowController.swift in Sources */,
 				A13CFE811A4843670020B0F8 /* ASCII.swift in Sources */,
 				A111BDD41A37228300FB04AE /* Vignere.swift in Sources */,
 				A111BDD01A370EFD00FB04AE /* NavigationController.swift in Sources */,
 				A13F1CE61A3F3E2300C1ADBC /* ROTCipher.swift in Sources */,
+				A13CFE8C1A4852010020B0F8 /* BrailleCipher.swift in Sources */,
 				A13CFE831A4844070020B0F8 /* ASCIIText.swift in Sources */,
 				A13F1CE41A3F3E1600C1ADBC /* ROTText.swift in Sources */,
 				A13CFE851A48446A0020B0F8 /* ASCIICipher.swift in Sources */,
