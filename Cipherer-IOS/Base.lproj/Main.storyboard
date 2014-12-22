@@ -80,47 +80,44 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Er-QV-ek2">
-                                <rect key="frame" x="16" y="8" width="288" height="159"/>
+                                <rect key="frame" x="16" y="8" width="288" height="197"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YW-fC-OpU">
-                                <rect key="frame" x="267" y="175" width="37" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KoV-gJ-8uJ"/>
-                                    <constraint firstAttribute="width" constant="37" id="Mph-PS-WKg"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearText:" destination="bOZ-gG-Qvl" eventType="touchUpInside" id="1Sp-yZ-0Uj"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Key" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-6R-fp5">
                                 <rect key="frame" x="16" y="213" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYE-uK-ol4">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="kC9-5c-sC8">
+                                        <connections>
+                                            <action selector="clearText:" destination="bOZ-gG-Qvl" id="sNq-KH-QsQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="M9A-6R-fp5" firstAttribute="trailing" secondItem="gxe-U3-jcW" secondAttribute="trailingMargin" id="BmI-hd-AvJ"/>
                             <constraint firstItem="5Er-QV-ek2" firstAttribute="leading" secondItem="gxe-U3-jcW" secondAttribute="leadingMargin" id="C1d-HY-Q88"/>
                             <constraint firstItem="M9A-6R-fp5" firstAttribute="leading" secondItem="gxe-U3-jcW" secondAttribute="leadingMargin" id="D0A-fn-HhX"/>
-                            <constraint firstItem="9YW-fC-OpU" firstAttribute="trailing" secondItem="gxe-U3-jcW" secondAttribute="trailingMargin" id="Eot-zV-WV6"/>
-                            <constraint firstItem="9YW-fC-OpU" firstAttribute="top" secondItem="5Er-QV-ek2" secondAttribute="bottom" constant="8" id="Gc3-8b-jOi"/>
+                            <constraint firstItem="xYE-uK-ol4" firstAttribute="leading" secondItem="gxe-U3-jcW" secondAttribute="leadingMargin" constant="-16" id="KY1-3A-oD0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xYE-uK-ol4" secondAttribute="trailing" constant="-16" id="L76-Zu-m6R"/>
+                            <constraint firstItem="s7T-EW-m4E" firstAttribute="top" secondItem="xYE-uK-ol4" secondAttribute="bottom" id="OT7-i5-dwg"/>
                             <constraint firstItem="s7T-EW-m4E" firstAttribute="top" secondItem="M9A-6R-fp5" secondAttribute="bottom" constant="220" id="Pwj-0W-qLK"/>
-                            <constraint firstItem="M9A-6R-fp5" firstAttribute="top" secondItem="9YW-fC-OpU" secondAttribute="bottom" constant="8" id="Vb0-q5-DpR"/>
+                            <constraint firstItem="M9A-6R-fp5" firstAttribute="top" secondItem="5Er-QV-ek2" secondAttribute="bottom" constant="8" id="jIP-Z7-73b"/>
                             <constraint firstItem="5Er-QV-ek2" firstAttribute="trailing" secondItem="gxe-U3-jcW" secondAttribute="trailingMargin" id="kkC-NX-Gdl"/>
                             <constraint firstItem="5Er-QV-ek2" firstAttribute="top" secondItem="paX-u6-jxo" secondAttribute="bottom" constant="8" id="sLz-Ys-QQQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Vignere" id="bFg-xL-18J"/>
                     <connections>
-                        <outlet property="clearButton" destination="9YW-fC-OpU" id="Gpu-7O-efm"/>
                         <outlet property="keyTextField" destination="M9A-6R-fp5" id="hUl-Va-t4X"/>
                         <outlet property="outputTextView" destination="5Er-QV-ek2" id="3X6-YG-A60"/>
                     </connections>
@@ -146,43 +143,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-Of-dqg">
-                                <rect key="frame" x="267" y="175" width="37" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0tp-EX-Qin"/>
-                                    <constraint firstAttribute="width" constant="37" id="58q-Ss-wBP"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearText:" destination="wL9-7n-s0q" eventType="touchUpInside" id="OKL-CH-UM3"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-yc-uCV">
-                                <rect key="frame" x="16" y="8" width="288" height="159"/>
+                                <rect key="frame" x="16" y="8" width="288" height="197"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X1-Ys-s1x">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="6SJ-xz-aME">
+                                        <connections>
+                                            <action selector="clearText:" destination="wL9-7n-s0q" id="nta-dM-aBO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zfK-Of-dqg" firstAttribute="top" secondItem="gQx-yc-uCV" secondAttribute="bottom" constant="8" id="2hs-sm-jBW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zfK-Of-dqg" secondAttribute="trailing" id="7et-c5-Zt4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gQx-yc-uCV" secondAttribute="trailing" id="G96-CV-1OR"/>
                             <constraint firstItem="SvA-cF-viu" firstAttribute="top" secondItem="KSM-sg-v4E" secondAttribute="bottom" constant="220" id="K8y-xO-p6r"/>
                             <constraint firstItem="KSM-sg-v4E" firstAttribute="leading" secondItem="OeZ-Fp-7I7" secondAttribute="leadingMargin" id="MdQ-jF-t36"/>
                             <constraint firstItem="gQx-yc-uCV" firstAttribute="top" secondItem="Zmq-jg-esQ" secondAttribute="bottom" constant="8" id="Pw6-1j-pPn"/>
+                            <constraint firstItem="1X1-Ys-s1x" firstAttribute="leading" secondItem="OeZ-Fp-7I7" secondAttribute="leadingMargin" constant="-16" id="bdM-Rn-Mq1"/>
+                            <constraint firstItem="SvA-cF-viu" firstAttribute="top" secondItem="1X1-Ys-s1x" secondAttribute="bottom" id="dW2-za-u1I"/>
                             <constraint firstItem="gQx-yc-uCV" firstAttribute="leading" secondItem="OeZ-Fp-7I7" secondAttribute="leadingMargin" id="f4P-hG-hqE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1X1-Ys-s1x" secondAttribute="trailing" constant="-16" id="iqu-cv-rI6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KSM-sg-v4E" secondAttribute="trailing" id="p40-1f-LAD"/>
-                            <constraint firstItem="KSM-sg-v4E" firstAttribute="top" secondItem="zfK-Of-dqg" secondAttribute="bottom" constant="8" id="yO4-Qb-JHV"/>
+                            <constraint firstItem="KSM-sg-v4E" firstAttribute="top" secondItem="gQx-yc-uCV" secondAttribute="bottom" constant="8" id="s0w-Kx-DBy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ROT" id="5Js-oP-WrY"/>
                     <connections>
-                        <outlet property="clearButton" destination="zfK-Of-dqg" id="W3R-Zg-30B"/>
                         <outlet property="keyTextField" destination="KSM-sg-v4E" id="yDg-Bn-VsC"/>
                         <outlet property="outputTextView" destination="gQx-yc-uCV" id="Bia-DI-xdC"/>
                     </connections>
@@ -203,21 +197,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQk-TE-2l7">
-                                <rect key="frame" x="267" y="175" width="37" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="kCj-Sa-xeb"/>
-                                    <constraint firstAttribute="width" constant="37" id="vu9-Cq-M3a"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearText:" destination="BGF-jG-9zo" eventType="touchUpInside" id="tjA-Uo-DgL"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5at-kE-Kwn">
-                                <rect key="frame" x="16" y="8" width="288" height="159"/>
+                                <rect key="frame" x="16" y="-56" width="288" height="261"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -244,20 +225,17 @@
                             <constraint firstItem="Cb3-Uk-Myv" firstAttribute="leading" secondItem="5MT-xB-Xmi" secondAttribute="leadingMargin" id="Ab4-6X-ISa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Cb3-Uk-Myv" secondAttribute="trailing" id="C7d-cI-h9A"/>
                             <constraint firstItem="GdO-Gz-WlE" firstAttribute="leading" secondItem="5MT-xB-Xmi" secondAttribute="leadingMargin" constant="-16" id="DS5-RL-rd5"/>
-                            <constraint firstItem="5at-kE-Kwn" firstAttribute="top" secondItem="xh2-oy-3Nq" secondAttribute="bottom" constant="8" id="GlG-GV-Otv"/>
+                            <constraint firstItem="Cb3-Uk-Myv" firstAttribute="top" secondItem="5at-kE-Kwn" secondAttribute="bottom" constant="8" id="DpE-QG-LOy"/>
+                            <constraint firstItem="5at-kE-Kwn" firstAttribute="top" secondItem="xh2-oy-3Nq" secondAttribute="bottom" constant="-56" id="GlG-GV-Otv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GdO-Gz-WlE" secondAttribute="trailing" constant="-16" id="IJR-m0-aSA"/>
-                            <constraint firstItem="cQk-TE-2l7" firstAttribute="top" secondItem="5at-kE-Kwn" secondAttribute="bottom" constant="8" id="Irl-EQ-6KC"/>
-                            <constraint firstItem="Cb3-Uk-Myv" firstAttribute="top" secondItem="cQk-TE-2l7" secondAttribute="bottom" constant="8" id="Js6-Ti-FF6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5at-kE-Kwn" secondAttribute="trailing" id="Mlj-eQ-8jX"/>
                             <constraint firstItem="ot0-Fx-xMn" firstAttribute="top" secondItem="GdO-Gz-WlE" secondAttribute="bottom" id="SEf-xA-THi"/>
                             <constraint firstItem="5at-kE-Kwn" firstAttribute="leading" secondItem="5MT-xB-Xmi" secondAttribute="leadingMargin" id="Uel-y8-9hT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cQk-TE-2l7" secondAttribute="trailing" id="niD-af-X6I"/>
                             <constraint firstItem="ot0-Fx-xMn" firstAttribute="top" secondItem="Cb3-Uk-Myv" secondAttribute="bottom" constant="220" id="yuT-V1-lO5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="qHG-18-xWv"/>
                     <connections>
-                        <outlet property="clearButton" destination="cQk-TE-2l7" id="syn-vH-2nN"/>
                         <outlet property="keyTextField" destination="Cb3-Uk-Myv" id="EPe-Lj-Mak"/>
                         <outlet property="outputTextView" destination="5at-kE-Kwn" id="oc7-cD-yvP"/>
                     </connections>
@@ -299,7 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-AA-ohP">
-                                <rect key="frame" x="16" y="-56" width="288" height="223"/>
+                                <rect key="frame" x="16" y="-56" width="288" height="261"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -310,36 +288,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LA-9P-y7B">
-                                <rect key="frame" x="267" y="175" width="37" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="1eW-X0-R56"/>
-                                    <constraint firstAttribute="height" constant="30" id="C4w-Q4-a1m"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearText:" destination="I3o-Yv-lkw" eventType="touchUpInside" id="rXs-f8-OXG"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFG-db-OJa">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="NuO-wD-aHP">
+                                        <connections>
+                                            <action selector="clearText:" destination="I3o-Yv-lkw" id="y0T-oO-lGU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1LA-9P-y7B" firstAttribute="top" secondItem="kk6-AA-ohP" secondAttribute="bottom" constant="8" id="AnK-Oc-Fjl"/>
+                            <constraint firstItem="SE0-jd-AJc" firstAttribute="top" secondItem="kk6-AA-ohP" secondAttribute="bottom" constant="8" id="Duv-hH-pcg"/>
                             <constraint firstItem="kk6-AA-ohP" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="E8c-rJ-qrL"/>
                             <constraint firstItem="kk6-AA-ohP" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="FLm-IN-34t"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" id="PU5-jq-gT5"/>
+                            <constraint firstItem="SFG-db-OJa" firstAttribute="leading" secondItem="owH-bu-iBF" secondAttribute="leadingMargin" constant="-16" id="SKa-hX-cWf"/>
+                            <constraint firstItem="szf-5X-bhz" firstAttribute="top" secondItem="SFG-db-OJa" secondAttribute="bottom" id="aKT-uG-ltR"/>
                             <constraint firstItem="kk6-AA-ohP" firstAttribute="top" secondItem="HQW-Cq-FMc" secondAttribute="bottom" constant="-56" id="fGB-9e-RB5"/>
-                            <constraint firstItem="SE0-jd-AJc" firstAttribute="top" secondItem="1LA-9P-y7B" secondAttribute="bottom" constant="8" id="foP-ka-QVP"/>
-                            <constraint firstItem="1LA-9P-y7B" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="ong-a8-9KN"/>
                             <constraint firstItem="SE0-jd-AJc" firstAttribute="trailing" secondItem="owH-bu-iBF" secondAttribute="trailingMargin" id="wwK-zg-htK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SFG-db-OJa" secondAttribute="trailing" constant="-16" id="xHq-hT-onh"/>
                             <constraint firstItem="szf-5X-bhz" firstAttribute="top" secondItem="SE0-jd-AJc" secondAttribute="bottom" constant="220" id="xan-am-FJ8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="14h-TE-7Kc"/>
                     <connections>
-                        <outlet property="clearButton" destination="1LA-9P-y7B" id="1dO-TW-TyS"/>
                         <outlet property="keyTextField" destination="SE0-jd-AJc" id="pJ8-T7-hzK"/>
                         <outlet property="outputTextView" destination="kk6-AA-ohP" id="jOw-4R-Tjo"/>
                     </connections>
@@ -380,40 +355,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mol-YL-XAn">
-                                <rect key="frame" x="267" y="205" width="37" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="ldp-BQ-npB"/>
-                                    <constraint firstAttribute="height" constant="30" id="o56-9R-Lm8"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearText:" destination="MTi-gx-Uzy" eventType="touchUpInside" id="8Kb-JA-aPE"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlE-9f-5Wp">
-                                <rect key="frame" x="16" y="8" width="288" height="189"/>
+                                <rect key="frame" x="16" y="8" width="288" height="183"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numbersAndPunctuation"/>
                             </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="med-b7-Yrv">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="X4g-ml-MVg">
+                                        <connections>
+                                            <action selector="clearText:" destination="MTi-gx-Uzy" id="V8r-mY-WvR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rlE-9f-5Wp" firstAttribute="top" secondItem="HMM-Tp-fBf" secondAttribute="bottom" constant="8" id="84V-g8-LCU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlE-9f-5Wp" secondAttribute="trailing" id="Bo0-PH-9Zg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mol-YL-XAn" secondAttribute="trailing" id="IOX-hS-hQh"/>
-                            <constraint firstItem="mol-YL-XAn" firstAttribute="top" secondItem="rlE-9f-5Wp" secondAttribute="bottom" constant="8" id="hAg-9s-ThT"/>
+                            <constraint firstItem="med-b7-Yrv" firstAttribute="top" secondItem="rlE-9f-5Wp" secondAttribute="bottom" constant="220" id="HGD-jj-ykp"/>
+                            <constraint firstItem="med-b7-Yrv" firstAttribute="leading" secondItem="ZuS-lU-pb6" secondAttribute="leadingMargin" constant="-16" id="MUC-K2-rEX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="med-b7-Yrv" secondAttribute="trailing" constant="-16" id="Rs9-xd-H9Q"/>
+                            <constraint firstItem="Xvi-bR-30E" firstAttribute="top" secondItem="med-b7-Yrv" secondAttribute="bottom" id="lNC-oS-dKe"/>
                             <constraint firstItem="rlE-9f-5Wp" firstAttribute="leading" secondItem="ZuS-lU-pb6" secondAttribute="leadingMargin" id="m51-04-f4n"/>
-                            <constraint firstItem="Xvi-bR-30E" firstAttribute="top" secondItem="mol-YL-XAn" secondAttribute="bottom" constant="220" id="nZg-AC-qRz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ASCII" id="BVr-Sz-tBB"/>
                     <connections>
-                        <outlet property="clearButton" destination="mol-YL-XAn" id="Atm-au-Uaf"/>
                         <outlet property="outputTextView" destination="rlE-9f-5Wp" id="VRt-5U-zGv"/>
                     </connections>
                 </viewController>
@@ -433,40 +405,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0G-6l-4b6">
-                                <rect key="frame" x="267" y="205" width="37" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="ALR-yC-gef"/>
-                                    <constraint firstAttribute="height" constant="30" id="a8B-Tc-zIQ"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearText:" destination="cgA-BD-pXf" eventType="touchUpInside" id="1Ui-sP-llU"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7t5-3q-Sgs">
-                                <rect key="frame" x="16" y="8" width="288" height="189"/>
+                                <rect key="frame" x="16" y="-56" width="288" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkA-ZN-3Rb">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="fet-0e-HvJ">
+                                        <connections>
+                                            <action selector="clearText:" destination="cgA-BD-pXf" id="pEm-D2-WnG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d7f-6q-64W" firstAttribute="top" secondItem="N0G-6l-4b6" secondAttribute="bottom" constant="220" id="537-Wu-heB"/>
                             <constraint firstItem="7t5-3q-Sgs" firstAttribute="leading" secondItem="3MZ-q1-B4o" secondAttribute="leadingMargin" id="E2S-qs-scX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7t5-3q-Sgs" secondAttribute="trailing" id="MMh-gu-MDe"/>
-                            <constraint firstItem="7t5-3q-Sgs" firstAttribute="top" secondItem="oQR-hb-as5" secondAttribute="bottom" constant="8" id="UdL-72-cvN"/>
-                            <constraint firstItem="N0G-6l-4b6" firstAttribute="top" secondItem="7t5-3q-Sgs" secondAttribute="bottom" constant="8" id="e82-w2-dzs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="N0G-6l-4b6" secondAttribute="trailing" id="rtg-b4-ORF"/>
+                            <constraint firstItem="d7f-6q-64W" firstAttribute="top" secondItem="EkA-ZN-3Rb" secondAttribute="bottom" id="QuQ-2K-Hqa"/>
+                            <constraint firstItem="7t5-3q-Sgs" firstAttribute="top" secondItem="oQR-hb-as5" secondAttribute="bottom" constant="-56" id="UdL-72-cvN"/>
+                            <constraint firstItem="EkA-ZN-3Rb" firstAttribute="top" secondItem="7t5-3q-Sgs" secondAttribute="bottom" constant="220" id="YVc-cJ-9tE"/>
+                            <constraint firstItem="EkA-ZN-3Rb" firstAttribute="leading" secondItem="3MZ-q1-B4o" secondAttribute="leadingMargin" constant="-16" id="cvR-9n-8y3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EkA-ZN-3Rb" secondAttribute="trailing" constant="-16" id="rVQ-OC-dzY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="9ag-fX-OfR"/>
                     <connections>
-                        <outlet property="clearButton" destination="N0G-6l-4b6" id="6cI-Np-3hU"/>
                         <outlet property="outputTextView" destination="7t5-3q-Sgs" id="vjg-IZ-Zfw"/>
                     </connections>
                 </viewController>
@@ -618,40 +587,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgG-Ih-1Jj">
-                                <rect key="frame" x="267" y="205" width="37" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bT8-c8-KDO"/>
-                                    <constraint firstAttribute="width" constant="37" id="nLl-2I-C5I"/>
-                                </constraints>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearText:" destination="Bkq-I7-a6H" eventType="touchUpInside" id="NsD-l9-r7J"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-wN-IvE">
-                                <rect key="frame" x="16" y="8" width="288" height="189"/>
+                                <rect key="frame" x="16" y="-56" width="288" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feu-y4-Xrl">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="dix-7o-hKq">
+                                        <connections>
+                                            <action selector="clearText:" destination="Bkq-I7-a6H" id="Ivr-mR-cHI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="feu-y4-Xrl" secondAttribute="trailing" constant="-16" id="01j-I9-54X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YbV-wN-IvE" secondAttribute="trailing" id="1cI-GF-wma"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zgG-Ih-1Jj" secondAttribute="trailing" id="7bQ-4n-MAp"/>
-                            <constraint firstItem="zgG-Ih-1Jj" firstAttribute="top" secondItem="YbV-wN-IvE" secondAttribute="bottom" constant="8" id="cTh-Ue-sf4"/>
-                            <constraint firstItem="YbV-wN-IvE" firstAttribute="top" secondItem="M3R-o1-QBL" secondAttribute="bottom" constant="8" id="jt5-zn-uFG"/>
-                            <constraint firstItem="Qfn-8P-nQr" firstAttribute="top" secondItem="zgG-Ih-1Jj" secondAttribute="bottom" constant="220" id="pGd-EO-dmi"/>
+                            <constraint firstItem="feu-y4-Xrl" firstAttribute="top" secondItem="YbV-wN-IvE" secondAttribute="bottom" constant="200" id="6WJ-pR-plj"/>
+                            <constraint firstItem="Qfn-8P-nQr" firstAttribute="top" secondItem="feu-y4-Xrl" secondAttribute="bottom" id="Bb9-TD-6GG"/>
+                            <constraint firstItem="feu-y4-Xrl" firstAttribute="leading" secondItem="Kl8-Io-Icv" secondAttribute="leadingMargin" constant="-16" id="DjJ-NP-vY1"/>
+                            <constraint firstItem="YbV-wN-IvE" firstAttribute="top" secondItem="M3R-o1-QBL" secondAttribute="bottom" constant="-56" id="jt5-zn-uFG"/>
                             <constraint firstItem="YbV-wN-IvE" firstAttribute="leading" secondItem="Kl8-Io-Icv" secondAttribute="leadingMargin" id="t0d-dL-9jJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" id="aMw-f2-RQE"/>
                     <connections>
-                        <outlet property="clearButton" destination="zgG-Ih-1Jj" id="yLm-Rz-G0P"/>
                         <outlet property="outputTextView" destination="YbV-wN-IvE" id="NeY-lh-QD1"/>
                     </connections>
                 </viewController>
