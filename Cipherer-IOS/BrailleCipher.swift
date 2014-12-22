@@ -42,19 +42,18 @@ class BrailleCipher: UIViewController, UITextViewDelegate {
         if (dot4.on) { offset += 0b001000; }
         if (dot5.on) { offset += 0b010000; }
         if (dot6.on) { offset += 0b100000; }
-        var codePoint = 10240 + offset;
-//        char character = (char) codePoint;
-//        text.getEditableText().append(character);
-        dot1.on = false
-        dot2.on = false
-        dot3.on = false
-        dot4.on = false
-        dot5.on = false
-        dot6.on = false
+        var codePoint: UInt32 = 10240 + offset;
+        outputTextView.text.append(UnicodeScalar(codePoint))
+        dot1.setOn(false, animated: true)
+        dot2.setOn(false, animated: true)
+        dot3.setOn(false, animated: true)
+        dot4.setOn(false, animated: true)
+        dot5.setOn(false, animated: true)
+        dot6.setOn(false, animated: true)
     }
     
     @IBAction func addSpace(sender: AnyObject) {
-        outputTextView.text = outputTextView.text + "s"
+        outputTextView.text = outputTextView.text + " "
     }
     
     @IBAction func deleteChar(sender: AnyObject) {

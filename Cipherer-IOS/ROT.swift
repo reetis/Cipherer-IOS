@@ -38,22 +38,30 @@ class ROT: UITabBarController, UITabBarControllerDelegate, UITextViewDelegate {
             var rotText: ROTText = viewController as ROTText
             
             rotText.keyTextField.text = rotCipher.keyTextField.text
-            rotText.outputTextView.text = decodeROT(rotCipher.outputTextView.text, key: rotCipher.keyTextField.text.toInt()!)
+            rotText.outputTextView.text = decodeROT(rotCipher.outputTextView.text, key: rotCipher.keyTextField.text.toInt())
         } else if viewController.title == "ROT Code" {      //Encode
             var rotCipher: ROTCipher = viewController as ROTCipher
             var rotText: ROTText = lastController as ROTText
             
             rotCipher.keyTextField.text = rotText.keyTextField.text
-            rotCipher.outputTextView.text = encodeROT(rotText.outputTextView.text, key: rotText.keyTextField.text.toInt()!)
+            rotCipher.outputTextView.text = encodeROT(rotText.outputTextView.text, key: rotText.keyTextField.text.toInt())
         }
         lastController = viewController
         return true
     }
     
-    func encodeROT(text: String, key: Int) -> String {
+    func encodeROT(text: String, key: Int?) -> String {
         var encodedText: String = ""
         
-        if (key <= 0 || text.isEmpty){
+        var pkey: Int
+        
+        if key == nil {
+            pkey = 0
+        } else {
+            pkey = key!
+        }
+        
+        if (pkey <= 0 || text.isEmpty){
             encodedText = text
         } else {
             var sInd: String.Index = text.startIndex
@@ -62,9 +70,9 @@ class ROT: UITabBarController, UITabBarControllerDelegate, UITextViewDelegate {
                 var num = c.utf8Value()
                 
                 if (c >= "a" && c <= "z") {
-                    c = Character(UnicodeScalar( (num - 97 + key) % 26 + 97 ))
+                    c = Character(UnicodeScalar( (num - 97 + pkey) % 26 + 97 ))
                 } else if (c >= "A" && c <= "Z") {
-                    c = Character(UnicodeScalar( (num - 65 + key) % 26 + 65 ))
+                    c = Character(UnicodeScalar( (num - 65 + pkey) % 26 + 65 ))
                 }
                 encodedText += String(c)
                 
@@ -75,10 +83,16 @@ class ROT: UITabBarController, UITabBarControllerDelegate, UITextViewDelegate {
         return encodedText
     }
     
-    func decodeROT(text: String, key: Int) -> String {
+    func decodeROT(text: String, key: Int?) -> String {
         var decodedText: String = ""
+        var pkey: Int
+        if key == nil {
+            pkey = 0
+        } else {
+            pkey = key!
+        }
         
-        if (key <= 0 || text.isEmpty){
+        if (pkey <= 0 || text.isEmpty){
             decodedText = text
         } else {
             var sInd: String.Index = text.startIndex
@@ -87,9 +101,9 @@ class ROT: UITabBarController, UITabBarControllerDelegate, UITextViewDelegate {
                 var num = c.utf8Value()
                 
                 if (c >= "a" && c <= "z") {
-                    c = Character(UnicodeScalar( (num - 71 - key % 26) % 26 + 97 ))
+                    c = Character(UnicodeScalar( (num - 71 - pkey % 26) % 26 + 97 ))
                 } else if (c >= "A" && c <= "Z") {
-                    c = Character(UnicodeScalar( (num - 39 - key % 26) % 26 + 65 ))
+                    c = Character(UnicodeScalar( (num - 39 - pkey % 26) % 26 + 65 ))
                 }
                 decodedText += String(c)
                 
