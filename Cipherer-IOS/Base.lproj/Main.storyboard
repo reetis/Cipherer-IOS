@@ -14,58 +14,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Hn4-Wr-L2q" kind="relationship" relationship="rootViewController" id="NNq-qd-HH4"/>
+                        <segue destination="ugI-gY-k5S" kind="relationship" relationship="rootViewController" id="G3a-Yi-4k4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPK-P2-hnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="294"/>
-        </scene>
-        <!--Cipherer-->
-        <scene sceneID="Rx0-DI-a50">
-            <objects>
-                <viewController storyboardIdentifier="MainWindow" id="Hn4-Wr-L2q" customClass="StartWindowController" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cIu-9M-MVO"/>
-                        <viewControllerLayoutGuide type="bottom" id="7II-Eo-IsP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="d80-58-NZ1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a cipher from side menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwS-Oq-RuD">
-                                <rect key="frame" x="35" y="310" width="250" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Cipherer!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cL-jB-yOT">
-                                <rect key="frame" x="24" y="267" width="273" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="DwS-Oq-RuD" firstAttribute="top" secondItem="8cL-jB-yOT" secondAttribute="bottom" constant="8" id="K0w-Iy-LqE"/>
-                            <constraint firstAttribute="centerX" secondItem="8cL-jB-yOT" secondAttribute="centerX" id="Ovp-2G-Jbs"/>
-                            <constraint firstAttribute="centerX" secondItem="DwS-Oq-RuD" secondAttribute="centerX" id="S0i-xG-Y1Z"/>
-                            <constraint firstAttribute="centerY" secondItem="8cL-jB-yOT" secondAttribute="centerY" id="nDe-iS-Fiz"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Cipherer" id="Uuk-mU-qtK">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon" id="x4f-Dq-hee">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="toggleSideMenu:" destination="Hn4-Wr-L2q" id="EH7-mD-N3k"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Deq-fM-jyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="592" y="298"/>
+            <point key="canvasLocation" x="-27" y="952"/>
         </scene>
         <!--Vignere Code-->
         <scene sceneID="nzN-bJ-GUW">
@@ -327,6 +281,7 @@
         <scene sceneID="gDh-Ab-ZJh">
             <objects>
                 <tabBarController storyboardIdentifier="VignereController" title="Vignere" id="ugI-gY-k5S" customClass="Vignere" customModule="Cipherer_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Eev-Kc-nm2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="sDh-YZ-urm">
@@ -517,7 +472,7 @@
                                             <action selector="clearText:" destination="dnq-Hq-JA2" id="lE3-wU-1mx"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Delete" id="nHt-b4-hac">
+                                    <barButtonItem title="Delete" width="200" id="nHt-b4-hac">
                                         <connections>
                                             <action selector="deleteChar:" destination="dnq-Hq-JA2" id="E9E-YJ-J5l"/>
                                         </connections>
@@ -646,9 +601,6 @@
             <point key="canvasLocation" x="2483" y="299"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="reveal-icon" width="22" height="17"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

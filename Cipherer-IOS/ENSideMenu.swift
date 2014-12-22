@@ -87,7 +87,7 @@ public class ENSideMenu : NSObject {
     private let sourceView : UIView!
     private var needUpdateApperance : Bool = false
     public weak var delegate : ENSideMenuDelegate?
-    private var isMenuOpen : Bool = false
+    private var isMenuOpen : Bool = true
     
     public init(sourceView: UIView, menuPosition: ENSideMenuPosition) {
         super.init()

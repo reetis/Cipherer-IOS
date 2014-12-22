@@ -10,7 +10,7 @@ import UIKit
 
 class MenuTableController: UITableViewController {
     var selectedMenuItem : Int = 0
-    var menuList: [(name: String, controller: String)] = [  ("Start window", "MainWindow"),
+    var menuList: [(name: String, controller: String)] = [
                                                             ("Vignere", "VignereController"),
                                                             ("ROT", "ROTController"),
                                                             ("ASCII", "ASCIIController"),
