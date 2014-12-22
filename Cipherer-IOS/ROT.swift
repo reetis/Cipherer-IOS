@@ -30,6 +30,9 @@ class ROT: UITabBarController, UITabBarControllerDelegate, UITextViewDelegate {
     }
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) -> Bool {
+        if lastController == viewController {
+            return true
+        }
         if viewController.title == "ROT Text" {             //Decode
             var rotCipher: ROTCipher = lastController as ROTCipher
             var rotText: ROTText = viewController as ROTText

@@ -30,6 +30,9 @@ class Vignere: UITabBarController, UITabBarControllerDelegate, UITextViewDelegat
     }
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) -> Bool {
+        if lastController == viewController {
+            return true
+        }
         if viewController.title == "Vignere Text" {             //Decode
             var vignereCipher: VignereCipher = lastController as VignereCipher
             var vignereText: VignereText = viewController as VignereText

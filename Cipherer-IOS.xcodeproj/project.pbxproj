@@ -13,6 +13,9 @@
 		A111BDD01A370EFD00FB04AE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDCE1A370EFD00FB04AE /* NavigationController.swift */; };
 		A111BDD21A371E9C00FB04AE /* StartWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDD11A371E9C00FB04AE /* StartWindowController.swift */; };
 		A111BDD41A37228300FB04AE /* Vignere.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111BDD31A37228300FB04AE /* Vignere.swift */; };
+		A13CFE811A4843670020B0F8 /* ASCII.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE801A4843670020B0F8 /* ASCII.swift */; };
+		A13CFE831A4844070020B0F8 /* ASCIIText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE821A4844070020B0F8 /* ASCIIText.swift */; };
+		A13CFE851A48446A0020B0F8 /* ASCIICipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CFE841A48446A0020B0F8 /* ASCIICipher.swift */; };
 		A13F1CE21A3F3D2000C1ADBC /* ROT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE11A3F3D2000C1ADBC /* ROT.swift */; };
 		A13F1CE41A3F3E1600C1ADBC /* ROTText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE31A3F3E1600C1ADBC /* ROTText.swift */; };
 		A13F1CE61A3F3E2300C1ADBC /* ROTCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13F1CE51A3F3E2300C1ADBC /* ROTCipher.swift */; };
@@ -42,6 +45,9 @@
 		A111BDCE1A370EFD00FB04AE /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A111BDD11A371E9C00FB04AE /* StartWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartWindowController.swift; sourceTree = "<group>"; };
 		A111BDD31A37228300FB04AE /* Vignere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vignere.swift; sourceTree = "<group>"; };
+		A13CFE801A4843670020B0F8 /* ASCII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCII.swift; sourceTree = "<group>"; };
+		A13CFE821A4844070020B0F8 /* ASCIIText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCIIText.swift; sourceTree = "<group>"; };
+		A13CFE841A48446A0020B0F8 /* ASCIICipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCIICipher.swift; sourceTree = "<group>"; };
 		A13F1CE11A3F3D2000C1ADBC /* ROT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROT.swift; sourceTree = "<group>"; };
 		A13F1CE31A3F3E1600C1ADBC /* ROTText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROTText.swift; sourceTree = "<group>"; };
 		A13F1CE51A3F3E2300C1ADBC /* ROTCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROTCipher.swift; sourceTree = "<group>"; };
@@ -76,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A13CFE7F1A4842C50020B0F8 /* ASCII */ = {
+			isa = PBXGroup;
+			children = (
+				A13CFE801A4843670020B0F8 /* ASCII.swift */,
+				A13CFE821A4844070020B0F8 /* ASCIIText.swift */,
+				A13CFE841A48446A0020B0F8 /* ASCIICipher.swift */,
+			);
+			name = ASCII;
+			sourceTree = "<group>";
+		};
 		A13F1CE01A3F3CF500C1ADBC /* ROT */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +135,7 @@
 				A111BDD11A371E9C00FB04AE /* StartWindowController.swift */,
 				A1FFAB4A1A3F04FF00CB145C /* Vignere */,
 				A13F1CE01A3F3CF500C1ADBC /* ROT */,
+				A13CFE7F1A4842C50020B0F8 /* ASCII */,
 			);
 			path = "Cipherer-IOS";
 			sourceTree = "<group>";
@@ -262,10 +279,13 @@
 				A16221581A2DCD100055F938 /* AppDelegate.swift in Sources */,
 				A111BDCC1A370B5600FB04AE /* ENSideMenuNavigationController.swift in Sources */,
 				A111BDD21A371E9C00FB04AE /* StartWindowController.swift in Sources */,
+				A13CFE811A4843670020B0F8 /* ASCII.swift in Sources */,
 				A111BDD41A37228300FB04AE /* Vignere.swift in Sources */,
 				A111BDD01A370EFD00FB04AE /* NavigationController.swift in Sources */,
 				A13F1CE61A3F3E2300C1ADBC /* ROTCipher.swift in Sources */,
+				A13CFE831A4844070020B0F8 /* ASCIIText.swift in Sources */,
 				A13F1CE41A3F3E1600C1ADBC /* ROTText.swift in Sources */,
+				A13CFE851A48446A0020B0F8 /* ASCIICipher.swift in Sources */,
 				A1FFAB491A3EFE9C00CB145C /* VignereCipher.swift in Sources */,
 				A111BDCF1A370EFD00FB04AE /* MenuTableController.swift in Sources */,
 				A1FFAB471A3EF15D00CB145C /* VignereText.swift in Sources */,
